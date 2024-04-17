@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin page and information center</title>
+
+    <style>
+      h3,
+      h4,
+      p {
+        display: inline-block;
+      }
+
+      li {
+        font-size: 15px;
+      }
+      .d {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <ul>
+      <div class="d">
+        <% users.forEach(user => { %>
+        <li style="list-style-type: disc">
+          <h3>Bride Name :</h3>
+          <%= user.brideName %> <br />
+          <h3>Groom Name :</h3>
+          <%= user.groomName %>
+          <br />
+          <h3>Email address :</h3>
+          <%= user.email %>
+          <br />
+          <h3>Phone number :</h3>
+          <%= user.phone %>
+
+          <br />
+          <h3>City :</h3>
+          <%= user.city %>
+
+          <br />
+          <h3>State :</h3>
+          <%= user.state %>
+
+          <br />
+          <h3>Pin code :</h3>
+          <%= user.pin %>
+          <br />
+
+          <h3>Venue choosen :</h3>
+          <%= user.venue %>
+          <br />
+          <h3>Date choosen :</h3>
+          <%= user.date %>
+          <br />
+          <h3>Story shared:</h3>
+          <%= user.story %>
+          <br />
+          <h3>First event :</h3>
+          <%= user.event1 %>
+          <br />
+          <h3>Second event :</h3>
+          <%= user.event2 %>
+          <br />
+          <h3>Third event :</h3>
+          <%= user.event3 %>
+
+          <br>
+          <br>
+
+        
+        </li>
+      
+
+      <br />
+      <br />
+      <% }); %>
+    </div>
+    </ul>
+  </body>
+</html>

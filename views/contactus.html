@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://kit.fontawesome.com/6d8694366f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link  rel="stylesheet" type="text/css" href="../assets/contactUsStyles.css" />
+
+
+      <script src="../controller/email.js"> </script>
+
+
+    <title>V <sup>2</sup> S <sup>2</sup></title>
+  </head>
+  <body>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: black"
+    >
+      <div class="container-fluid" id="Main">
+        <a class="navbar-brand" href="#"
+          >V <sup>2</sup> S <sup>2</sup> &nbsp; Phototgraphers</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Engagement</a></li>
+                <li><a class="dropdown-item" href="#">Pre-Wedding</a></li>
+                <li><a class="dropdown-item" href="../mo.html">Wedding</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Short Films</a></li>
+                <li><a class="dropdown-item" href="#">Advertisement</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="Body_form">
+        <div class="Form">
+
+ <!-- ******************************FORM*****************************************-->
+
+
+          <form class="row g-3" name="frm" method="post" action="/addDetails" onsubmit="f()">
+            <!-- ************************************************************** -->
+
+            <div class="col-md-6">
+              <label for="Bride-Name" class="form-label">Bride</label>
+              <input type="text" required class="form-control" id="Bride-Name" placeholder="Name of Bride" name="brideName" />
+            </div>
+
+            <div class="col-md-6">
+              <label for="Groom-Name" class="form-label">Groom</label>
+              <input type="text" required class="form-control" id="Groom-Name" placeholder="Name of Groom" name="groomName"/>
+            </div>
+
+            <div class="col-md-7">
+              <label for="Email" class="form-label">Email</label>
+              <input type="email" required class="form-control" id="Email" placeholder="abc@gmail.com" name="email"/>
+
+            </div>
+
+            <div class="col-md-5">
+              <label for="Phone" class="form-label">Phone</label>
+              <input type="number" required class="form-control" id="Phone" placeholder="123456789" name="phone"/>
+
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" required class="form-control" id="inputCity" name="city" />
+
+            </div>
+            <div class="col-md-5">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" required class="form-select" name="state">
+                <option >Maharashtra</option>
+                <option>Delhi</option>
+                <option>Goa</option>
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputZip" class="form-label">Pin</label>
+              <input type="text" required class="form-control" id="inputZip" name="pin"/>
+            </div>
+
+            <div class="col-md-9">
+              <label for="Venue" class="form-label">Venue</label>
+              <input type="text" required class="form-control" id="Venue" placeholder="Name of Bride" name="venue"/>
+            </div>
+
+            <div class="col-md-3">
+              <label for="Date" class="form-label">Date</label>
+              <input type="date" required class="form-control" id="Date" name="date" />
+            </div>
+
+            <div class="col-md-12">
+              <label for="Story" class="form-label"
+                >Tell us about your story....</label
+              >
+              <!-- <input type="" class="form-control" id="Venue" placeholder="Name of Bride"> -->
+              <textarea id="Story" class="form-control" required style="height: 140px" placeholder="Story" name="story"></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <label for="Event-1" class="form-label">Day 1 Event</label>
+              <input type="text" required class="form-control" id="Event-1" placeholder="Mehendi" name="event1"/>
+            </div>
+
+            <div class="col-md-12">
+              <label for="Event-2" class="form-label">Day 2 Event</label>
+              <input type="text" required class="form-control" id="Event-2" placeholder="Wedding" name="event2"/>
+            </div>
+
+            <div class="col-md-12">
+              <label for="Event-3" class="form-label">Day 3 Event</label>
+              <input  type="text" required class="form-control" id="Event-3" placeholder="Reception" name="event3" />
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input  class="form-check-input" type="checkbox" id="gridCheck"/>
+                <label class="form-check-label" for="gridCheck">
+                  We are allowed to contact me through mail/phone no. provided
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <input class="btn btn-primary" type="submit"  name="submit" value="submit">
+                
+
+             
+
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- /**********************************Footer***************************************/ -->
+
+    <section class="footer">
+      <div class="Add">
+        <h6>
+          Building no.1, Lumbini Nagar,
+        </h6>
+        <h6>
+          Hingna T-Point, Hingna Road.
+        </h6>
+        <h6>
+          Nagpur, Maharashtra- 440016.
+        </h6>
+
+        <h4>
+          <br>
+          © 2023 V <sup>2</sup> S <sup>2</sup>  </h5>
+        </h4>
+
+      </div>
+
+      <div class="copyright">
+        
+        <h4>
+            © 2023 V <sup>2</sup> S <sup>2</sup>  </h5>
+        </h4>
+        <br>
+        <h3>
+          <div>
+            <a class="fa-brands fa-twitter"></a> &nbsp;
+            <a class="fa-brands fa-facebook"></a> &nbsp;
+            <a class="fa-brands fa-instagram"></a> &nbsp;
+            <a class="fa-brands fa-linkedin"></a> &nbsp;
+          </div>
+        </h3>
+      </div>
+
+      <div class="Social-contact">
+        <h6>
+          Phone: 7709346967 / 8177804889 
+        </h6>
+        <h6>
+          Email: V2S2@gmail.com  
+        </h6>
+
+        <h5>
+          <br>
+          <div>
+            <a class="fa-brands fa-twitter"></a> &nbsp;
+            <a class="fa-brands fa-facebook"></a> &nbsp;
+            <a class="fa-brands fa-instagram"></a> &nbsp;
+            <a class="fa-brands fa-linkedin"></a> &nbsp;
+          </div>
+        </h6>
+      </div>
+
+    </section>
+
+
+<!-- *****************************  email code ********************************-->
+
+
+<script>
+
+
+function mail(){
+
+var nodemailer = require("nodemailer");
+
+console.log("hello");
+
+
+var transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "abhinitnaware01@gmail.com",
+    pass: "pccr sxdj teow kmyv",
+  },
+});
+
+var mailOptions = {
+  from: "abhinitnaware01@gmail.com",
+  to: "sanskarkashyap156@gmail.com",
+  subject: "Sending Email using Node.js",
+  text: "kaisa hai makhi chor !",
+};
+
+transporter.sendMail(mailOptions, function (error, info) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Email sent: " + info.response);
+  }
+});
+
+console.log("BYY");
+
+}
+
+
+
+
+
+
+</script>
+
+     
+
+ <!--  <script src="../controller/email.js"></script>  -->
+  </body>
+</html>
